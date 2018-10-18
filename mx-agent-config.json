@@ -1,0 +1,11 @@
+{
+  "requestHandlers": [
+    { "name":"*" }
+  ],
+  "microflows":[
+    { "name":"*" }
+  ],
+  "activities":[
+    { "name":"*" }
+  ] 
+}
