@@ -28,6 +28,18 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
+	public static void getNuNl(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			Core.execute(context, "MxAppMetricsTest.GetNuNl", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
 	public static void incrementMetricEvery6Seconds(IContext context)
 	{
 		try
@@ -85,6 +97,19 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("MetricTestData", _metricTestData == null ? null : _metricTestData.getMendixObject());
 			Core.execute(context, "MxAppMetricsTest.RegisterGaugeMetric", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void registerMetric(IContext context, mxappmetricstest.proxies.Metric _metric)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("Metric", _metric == null ? null : _metric.getMendixObject());
+			Core.execute(context, "MxAppMetricsTest.RegisterMetric", params);
 		}
 		catch (CoreException e)
 		{

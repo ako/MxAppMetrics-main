@@ -26,7 +26,7 @@ public class MetricTestData
 		MetricTagValue("MetricTagValue"),
 		MetricTags("MetricTags"),
 		IsKPI("IsKPI"),
-		Attribute("Attribute");
+		MetricTimestamp("MetricTimestamp");
 
 		private java.lang.String metaName;
 
@@ -330,39 +330,39 @@ public class MetricTestData
 	}
 
 	/**
-	 * @return value of Attribute
+	 * @return value of MetricTimestamp
 	 */
-	public final java.util.Date getAttribute()
+	public final java.util.Date getMetricTimestamp()
 	{
-		return getAttribute(getContext());
+		return getMetricTimestamp(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of Attribute
+	 * @return value of MetricTimestamp
 	 */
-	public final java.util.Date getAttribute(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getMetricTimestamp(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Attribute.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.MetricTimestamp.toString());
 	}
 
 	/**
-	 * Set value of Attribute
-	 * @param attribute
+	 * Set value of MetricTimestamp
+	 * @param metrictimestamp
 	 */
-	public final void setAttribute(java.util.Date attribute)
+	public final void setMetricTimestamp(java.util.Date metrictimestamp)
 	{
-		setAttribute(getContext(), attribute);
+		setMetricTimestamp(getContext(), metrictimestamp);
 	}
 
 	/**
-	 * Set value of Attribute
+	 * Set value of MetricTimestamp
 	 * @param context
-	 * @param attribute
+	 * @param metrictimestamp
 	 */
-	public final void setAttribute(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date attribute)
+	public final void setMetricTimestamp(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date metrictimestamp)
 	{
-		getMendixObject().setValue(context, MemberNames.Attribute.toString(), attribute);
+		getMendixObject().setValue(context, MemberNames.MetricTimestamp.toString(), metrictimestamp);
 	}
 
 	/**
