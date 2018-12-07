@@ -45,7 +45,7 @@ public class CounterMetric extends CustomJavaAction<java.lang.Boolean>
 	{
 		// BEGIN USER CODE
 		ILogNode logger = Core.getLogger("AppMetrics");
-		logger.info("CounterMetric");
+		logger.debug("CounterMetric");
 		Map<String, String> tags = TagSplitter.splitTags(this.Tags);
 		tags.put(this.TagName, this.TagValue);
 		tags.put("KPI",this.IsApplicationKPI.toString());

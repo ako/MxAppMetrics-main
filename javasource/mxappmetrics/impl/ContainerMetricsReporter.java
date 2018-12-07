@@ -16,7 +16,7 @@ public class ContainerMetricsReporter implements Runnable {
     public void run() {
 
         try {
-            logger.info("Reporting container metrics");
+            logger.debug("Reporting container metrics");
             OperatingSystemMXBean osMxBean = (com.sun.management.OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
 
             Map<String, String> tags = new HashMap<String, String>();

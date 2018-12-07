@@ -43,7 +43,7 @@ public class CounterDecrementMetric extends CustomJavaAction<java.lang.Boolean>
 	{
 		// BEGIN USER CODE
 		ILogNode logger = Core.getLogger("AppMetrics");
-		logger.info("CounterDecrementMetric");
+		logger.debug("CounterDecrementMetric");
 		Map<String, String> tags = TagSplitter.splitTags(this.Tags);
 		tags.put(this.TagName, this.TagValue);
 		tags.put("KPI",this.IsApplicationKPI.toString());
